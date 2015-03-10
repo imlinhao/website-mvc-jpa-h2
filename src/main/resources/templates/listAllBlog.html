@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>博客</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/template.css" type="text/css" />
+</head>
+<body>
+<div><a href="/postBlog">写博客</a></div>
+<div th:each="blog:${blogs}">  
+    <h2 th:utext="${blog.title}"></h2>  
+    <div th:utext="${blog.content}"></div>  
+</div> 
+</body>
+</html>
